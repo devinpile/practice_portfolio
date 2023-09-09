@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <!-- Add your CSS stylesheets and JavaScript libraries here -->
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About Me', about_path %></li>
+        <li><%= link_to 'Portfolio', portfolio_path %></li>
+        <li><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Discover my latest projects and learn more about me.</p>
+      <%= link_to 'View Portfolio', portfolio_path, class: 'cta-button' %>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>Insert a brief description of yourself and your skills here.</p>
+      <%= link_to 'Learn More', about_path, class: 'cta-button' %>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="portfolio-content">
+      <h2>Portfolio</h2>
+      <!-- Display your portfolio projects here -->
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-content">
+      <h2>Contact Me</h2>
+      <p>Have a project in mind or just want to say hi? Feel free to get in touch.</p>
+      <%= link_to 'Contact Me', contact_path, class: 'cta-button' %>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <%= Time.now.year %> Your Name</p>
+  </footer>
+</body>
+</html>
